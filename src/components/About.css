@@ -1,0 +1,149 @@
+/* components/About.css */
+.about-section {
+  background: rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 5% 5%, rgba(0, 255, 255, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 95% 95%, rgba(0, 255, 255, 0.05) 0%, transparent 40%);
+  z-index: 0;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes blurryLights {
+  0% { filter: blur(10px); opacity: 0.5; }
+  50% { filter: blur(15px); opacity: 0.7; }
+  100% { filter: blur(10px); opacity: 0.5; }
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #EFE9E7;
+}
+
+.education, .experience {
+  margin-top: 40px;
+}
+
+.education h3, .experience h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #FF7F50;
+}
+
+.education-card, .experience-card {
+  background-color: rgba(255, 127, 80, 0.05);
+  border-left: 3px solid #FF7F50;
+  padding: 20px;
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover, .experience-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(255, 127, 80, 0.1);
+}
+
+.education-header, .experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.education-header h4, .experience-header h4 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #EFE9E7;
+}
+
+.duration {
+  color: #FF7F50;
+  font-size: 0.9rem;
+}
+
+.institution, .position {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  opacity: 0.9;
+  color: #EFE9E7;
+}
+
+.coursework h5 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #EFE9E7;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 10px;
+}
+
+.course-list li {
+  background-color: rgba(255, 127, 80, 0.1);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  color: #EFE9E7;
+}
+
+.course-list li:hover {
+  background-color: rgba(255, 127, 80, 0.2);
+}
+
+.responsibilities {
+  padding-left: 20px;
+}
+
+.responsibilities li {
+  margin-bottom: 8px;
+  color: #EFE9E7;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .education-header, .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .duration {
+    margin-top: 5px;
+  }
+  
+  .course-list {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

@@ -1,0 +1,131 @@
+/* components/Skills.css */
+.skills-section {
+  background: rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 5% 5%, rgba(0, 255, 255, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 95% 95%, rgba(0, 255, 255, 0.05) 0%, transparent 40%);
+  z-index: 0;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.skills-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.skills-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+}
+
+.skills-category h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, #FF7F50, transparent);
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skill {
+  width: 100%;
+}
+
+.skill-name {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  color: #EFE9E7;
+}
+
+.skill-bar {
+  height: 10px;
+  background-color: rgba(239, 233, 231, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #FF7F50, rgba(255, 127, 80, 0.7));
+  border-radius: 5px;
+  transition: width 1.5s ease-in-out;
+  position: relative;
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background-color: rgba(239, 233, 231, 0.3);
+  box-shadow: 0 0 10px rgba(255, 127, 80, 0.5);
+}
+
+.other-skills {
+  margin-top: 60px;
+}
+
+.other-skills h3 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: #FF7F50;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill-tag {
+  background-color: rgba(255, 127, 80, 0.1);
+  color: #EFE9E7;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 127, 80, 0.3);
+}
+
+.skill-tag:hover {
+  background-color: rgba(255, 127, 80, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 127, 80, 0.1);
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
