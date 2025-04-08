@@ -8,8 +8,7 @@ This is my personal portfolio website where I showcase my projects, skills, and 
 
 - 🧑‍💻 About Me section
 - 📂 Projects with live links
-- 📞 Contact form (with email integration)
-- 🌗 Light/Dark mode (optional)
+- 📞 Contact 
 
 ## 🛠 Tech Stack
 
@@ -19,3 +18,4 @@ This is my personal portfolio website where I showcase my projects, skills, and 
 ## 📍 Live Demo
 
 Check it out live: 
+https://hs294portfolio.vercel.app/
